@@ -22,9 +22,9 @@ function setout(){
 function install_aria2(){
 	#yum -y update
 	#安装aria2静态编译版本，来源于https://github.com/q3aql/aria2-static-builds/
-	wget -c http://soft.xiaoz.org/linux/aria2-1.34.0-linux-gnu-64bit-build1.tar.bz2
-	tar jxvf aria2-1.34.0-linux-gnu-64bit-build1.tar.bz2
-	cd aria2-1.34.0-linux-gnu-64bit-build1
+	wget -c https://github.com/stoee/Aria2_OneIndex/raw/master/aria2-1.35.0-linux-gnu-64bit-build1.tar.bz2
+	tar jxvf aria2-1.35.0-linux-gnu-64bit-build1.tar.bz2
+	cd aria2-1.35.0-linux-gnu-64bit-build1
 	make install
 	cd ..
 }
@@ -218,8 +218,7 @@ case $istype in
     	setout
     	install_aria2 && \
     	install_caddy && \
-    	dealconf && \
-    	chk_firewall && \
+    	dealconf  && \
     	setting && \
     	cleanup
     ;;
