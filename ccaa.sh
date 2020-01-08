@@ -26,7 +26,7 @@ function install_aria2(){
 	tar jxvf aria2-1.35.0-linux-gnu-64bit-build1.tar.bz2
 	cd aria2-1.35.0-linux-gnu-64bit-build1
 	make install
-	cd ..
+	cd /root/tmp
 }
 #安装caddy
 function install_caddy(){
@@ -51,9 +51,10 @@ function dealconf(){
 	touch /etc/ccaa/aria2.session
 	touch /etc/ccaa/aria2.log
 	touch /etc/ccaa/caddy.log
-	cp aria2.conf /etc/ccaa/
-	cp caddy.conf /etc/ccaa/
-	cp upbt.sh /etc/ccaa/
+	cd /root/tmp
+	cp /root/tmp/aria2.conf /etc/ccaa/
+	cp /root/tmp/caddy.conf /etc/ccaa/
+	cp /root/tmp/upbt.sh /etc/ccaa/
 	chmod +x /etc/ccaa/upbt.sh
 	chmod +x ccaa
 	cp ccaa /usr/sbin
