@@ -1,5 +1,7 @@
 # CCAA
 
+cd ~ && git clone https://github.com/stoee/ccaa.git tmp && cd tmp && chmod +x ccaa.sh && sh ccaa.sh
+
 Linux + Caddy + Aria2 + AriaNg，实现离线下载、文件管理、在线播放等功能。
 
 - Aria2 提供离线下载
